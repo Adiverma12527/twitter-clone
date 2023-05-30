@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import SignIn from './components/pages/LoginPage/login';
+import Login from './components/pages/LoginPage/login';
 import SignUp from './components/pages/RegisterPage/register';
 import {createBrowserRouter,RouterProvider} from 'react-router-dom'
+import Password from './components/pages/LoginPage/password';
 
 const router = createBrowserRouter([
   {
@@ -13,10 +14,14 @@ const router = createBrowserRouter([
     element: <App/>,
   },
   {path:"/login",
-    element:<SignIn/>
+    element:<Login/>
   },
   {path:"/register",
     element:<SignUp/>
+  },{
+    path:"/password",
+    element:<Password/>
+
   }
 
 ]);
